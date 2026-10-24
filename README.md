@@ -1,10 +1,18 @@
-# MemComposer
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="pic/memcomposer_banner_dark.png">
+    <img alt="MemComposer" src="pic/memcomposer_banner.png" width="640">
+  </picture>
+</p>
 
-**Learning to Assemble Memories for LLM Agents via Reinforcement Learning**
+<p align="center">
+  <b>Learning to Assemble Memories for LLM Agents via Reinforcement Learning</b>
+</p>
 
-[Paper](https://arxiv.org/abs/2610.21091) ·
-[Data](https://huggingface.co/datasets/Makrrr/MemComposer-data) ·
-[Models](https://huggingface.co/Makrrr/MemComposer)
+<p align="center">
+  <a href="https://arxiv.org/abs/2610.21091">Paper</a> ·
+  <a href="https://huggingface.co/collections/Makrrr/memcomposer">Models &amp; Data</a>
+</p>
 
 Agent memory lets an LLM agent reuse past experience without updating its weights. But a memory that
 is similar to the current query is not necessarily useful, and how the memories are put together
@@ -12,8 +20,6 @@ matters. MemComposer reads the query and the retrieved candidate memories togeth
 which memories a frozen agent (the executor) receives, how many, and in what order. It is trained
 with **ExPO** (Experience Policy Optimization), a GRPO-style objective. The reward is the task
 success of the full agent interaction that the assembled memories lead to.
-
-![MemComposer overview](pic/overview.png)
 
 <!-- Results: to be added. -->
 

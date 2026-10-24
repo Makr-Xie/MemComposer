@@ -11,3 +11,4 @@ checkpoints/*
 __pycache__/
 *.pyc
 .env
+*.zip
