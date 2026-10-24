@@ -1,18 +1,10 @@
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="pic/memcomposer_banner_dark.png">
-    <img alt="MemComposer" src="pic/memcomposer_banner.png" width="640">
-  </picture>
-</p>
+![MemComposer](pic/memcomposer_banner.png)
 
-<p align="center">
-  <b>Learning to Assemble Memories for LLM Agents via Reinforcement Learning</b>
-</p>
+### Learning to Assemble Memories for LLM Agents via Reinforcement Learning
 
-<p align="center">
-  <a href="https://arxiv.org/abs/2610.21091">Paper</a> ·
-  <a href="https://huggingface.co/collections/Makrrr/memcomposer">Models &amp; Data</a>
-</p>
+![](pic/arxiv.svg) [Paper](https://arxiv.org/abs/2610.21091) · ![](pic/huggingface.svg) [Models & Data](https://huggingface.co/collections/Makrrr/memcomposer)
+
+---
 
 Agent memory lets an LLM agent reuse past experience without updating its weights. But a memory that
 is similar to the current query is not necessarily useful, and how the memories are put together
@@ -21,23 +13,23 @@ which memories a frozen agent (the executor) receives, how many, and in what ord
 with **ExPO** (Experience Policy Optimization), a GRPO-style objective. The reward is the task
 success of the full agent interaction that the assembled memories lead to.
 
-<!-- Results: to be added. -->
+
 
 ## Requirements
 
 - **Platform:** Linux with CUDA GPUs. All experiments ran on a single node with 8×H100.
 - **Training:** Python 3.12 and [verl](https://github.com/volcengine/verl), installed into `verl/`.
-  Read [`verl/README.md`](verl/README.md) before training. There are two environments:
+Read [`verl/README.md`](verl/README.md) before training. There are two environments:
   - **Qwen3-4B:** PyTorch 2.8, vLLM 0.10.2, transformers 4.56, peft 0.19, verl 0.7.1.
   - **Ministral-3-8B:** PyTorch 2.11, vLLM 0.24, transformers 5.9, peft 0.21, verl 0.9.1.
 - **τ²-bench:** a separate environment with
-  [tau2-bench](https://github.com/sierra-research/tau2-bench) (`pip install -e`, `TAU2_ROOT` set to
-  the checkout). It also needs an OpenAI-compatible endpoint (`BEDROCK_BASE_URL`,
-  `BEDROCK_API_KEY`) for the GLM-4.7 user simulator and the hosted executors.
+[tau2-bench](https://github.com/sierra-research/tau2-bench) (`pip install -e`, `TAU2_ROOT` set to
+the checkout). It also needs an OpenAI-compatible endpoint (`BEDROCK_BASE_URL`,
+`BEDROCK_API_KEY`) for the GLM-4.7 user simulator and the hosted executors.
 - **ALFWorld:** a separate environment with [ALFWorld](https://github.com/alfworld/alfworld). Run
-  `alfworld-download` and set `ALFWORLD_DATA`.
+`alfworld-download` and set `ALFWORLD_DATA`.
 - **Memory banks:** an OpenAI-compatible embedding server for Qwen3-Embedding-8B, needed only to
-  build a bank's index or retrieve from it.
+build a bank's index or retrieve from it.
 
 ## Download the data and the adapters
 
@@ -57,6 +49,7 @@ contents.
 ### Use a memory bank
 
 Each memory is a folder holding three files:
+
 - `memory.json`: the full record;
 - `digest.txt`: the compact form MemComposer reads;
 - `full.txt`: the form the executor receives.
@@ -102,7 +95,7 @@ VAL_ONLY=True VAL_BEFORE=True training/tau2_ministral/run_airline.sh \
 ## Build your own memory bank
 
 - **τ²-bench:** [`memory_bank/tau2/`](memory_bank/tau2/README.md). Any agent in
-  `memory_bank/tau2/agents.py` can be used, and adding one takes a single line.
+`memory_bank/tau2/agents.py` can be used, and adding one takes a single line.
 - **ALFWorld:** [`memory_bank/alfworld/`](memory_bank/alfworld/README.md).
 
 ## Citation
@@ -123,7 +116,7 @@ VAL_ONLY=True VAL_BEFORE=True training/tau2_ministral/run_airline.sh \
 
 - **Code and adapters:** [Apache-2.0](LICENSE).
 - **Data:** CC-BY-4.0. It also contains material that keeps its own terms; see the
-  [dataset card](https://huggingface.co/datasets/Makrrr/MemComposer-data).
+[dataset card](https://huggingface.co/datasets/Makrrr/MemComposer-data).
 
 ## Acknowledgements
 
