@@ -1,0 +1,13 @@
+# Downloaded or generated data (released on Hugging Face), checkpoints and run outputs
+data/*
+!data/README.md
+models/
+runs/
+verl/*
+!verl/README.md
+checkpoints/*
+!checkpoints/README.md
+
+__pycache__/
+*.pyc
+.env
