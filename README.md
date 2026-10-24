@@ -1,8 +1,16 @@
-![MemComposer](pic/memcomposer_banner.png)
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="pic/memcomposer_banner_dark.png">
+    <img alt="MemComposer" src="pic/memcomposer_banner.png" width="640">
+  </picture>
+</p>
 
-### Learning to Assemble Memories for LLM Agents via Reinforcement Learning
+<h3 align="center">Learning to Assemble Memories for LLM Agents via Reinforcement Learning</h3>
 
-![](pic/arxiv.svg) [Paper](https://arxiv.org/abs/2610.21091) · ![](pic/huggingface.svg) [Models & Data](https://huggingface.co/collections/Makrrr/memcomposer)
+<p align="center">
+  <a href="https://arxiv.org/abs/2610.21091"><img src="pic/arxiv.svg" height="16" alt=""> Paper</a> |
+  <a href="https://huggingface.co/collections/Makrrr/memcomposer"><img src="pic/huggingface.svg" height="16" alt=""> Models &amp; Data</a>
+</p>
 
 ---
 
