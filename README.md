@@ -8,7 +8,7 @@
 <h3 align="center">Learning to Assemble Memories for LLM Agents via Reinforcement Learning</h3>
 
 <p align="center">
-  <a href="https://arxiv.org/abs/2610.21091"><img src="pic/arxiv.svg" height="16" alt=""> Paper</a> |
+  <a href="https://arxiv.org/abs/2610.21091">📄 Paper</a> |
   <a href="https://huggingface.co/collections/Makrrr/memcomposer"><img src="pic/huggingface.svg" height="16" alt=""> Models &amp; Data</a>
 </p>
 
